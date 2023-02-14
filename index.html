@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/810f2e7b5c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>USTP Information Technology Student,</p>
+                <h1>John Gabriel B. Bagares</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="close.png">
+                </div>
+                <div class="col2">
+                    <h1 class="headerabout">
+                        About me
+                    </h1>
+                    <p>
+                        What is the bravest thing you've ever said? asked the boy. <br/>
+                        'Help,' said the horse. <br/>
+                        'Asking for help isn't giving up,' said the horse. 'It's refusing to give up. <br/><br/>
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; -The Boy, the Mole, the Fox and the Horse
+                    </p>
+
+                    <div class="titles">
+                        <p class="tab1 activetab" onclick="opentab('skills')">Skills</p>
+                        <p class="tab1" onclick="opentab('exp')">Experience</p>
+                        <p class="tab1" onclick="opentab('edu')">Education</p>
+                    </div>
+
+                    <div class="contents active" id="skills">
+                        <ul>
+                            <li>Coding Languages: Java, Python</li>
+                            <li>Web Development</li>
+                            <li>Fast Learner</li>
+                        </ul>
+                    </div>
+
+                    <div class="contents" id="exp">
+                        <ul>
+                            <p>No experience yet. hoping to have some soon :D</p>
+                        </ul>
+                    </div>
+
+                    <div class="contents" id="edu">
+                        <ul>
+                            <li><span>2014</span><br/> Lourdes College Grade School</li>
+                            <li><span>2018</span><br/> Little Me Academy</li>
+                            <li><span>2020</span><br/> Corpus Christi Highschool</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="projects">
+        <div class="cointainer">
+            <h1 class="title">Projects</h1>
+            <div class="projectlist">
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2>Calculator</h2>
+                    <p>basic calculator applying basic skills in python</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>TicTacToe Game</h2>
+                    <p>TicTacToe game applying java concepts and Object-Oriented Programming</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-file"></i>
+                    <h2>More Projects to Come :D</h2>
+                    <p>I am still a novice programmer and i will try my best to create more projects</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="contactme">
+        <div class="container">
+            <div class="row">
+                <div class="contact1">
+                    <h1 class="title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i>bagaresjohn@gmail.com</p>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/johneh_bee/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/HideokiSenpai/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/JohnnyBee_9"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/JGBagares"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact2">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn"> Sumbit </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab1");
+    var tabcontents = document.getElementsByClassName("contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("activetab");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active");
+        }
+
+        event.currentTarget.classList.add("activetab");
+        document.getElementById(tabname).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
